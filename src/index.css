@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
+
+/* Isso garante que a fonte padrão seja sempre Sans-Serif, como você gosta */
+@theme {
+  --font-sans: "Inter", "ui-sans-serif", "system-ui";
+}
+
+@keyframes shimmer-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(8, 32, 50, 0.4); transform: scale(1); }
+  50% { box-shadow: 0 0 20px 5px rgba(8, 32, 50, 0.7); transform: scale(1.03); }
+  100% { box-shadow: 0 0 0 0 rgba(8, 32, 50, 0.4); transform: scale(1); }
+}
+
+.btn-cintilante {
+  animation: shimmer-pulse 2s infinite ease-in-out;
+  background-color: #082032;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.font-serif { 
+  font-family: 'Raleway', sans-serif !important; 
+}
+
+.fade-in-smooth {
+    animation: fadeIn ease 0.8s;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /* Animação do fundo (Pulso de cor) */
+@keyframes brilhoIntercalado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animação do reflexo (Passagem de luz) */
+@keyframes shine {
+  0% { 
+    left: -100%; 
+  }
+  /* O brilho leva um pouco mais de tempo para atravessar (15% do ciclo) */
+  15% { 
+    left: 125%; 
+  }
+  /* Ele permanece em 125% (invisível) até o fim dos 100% para criar o intervalo */
+  100% { 
+    left: 125%; 
+  }
+}
+
+.animate-shine {
+  /* Aumentamos de 3s para 6s para um movimento bem mais calmo e sutil */
+  -webkit-animation: shine 6s infinite ease-in-out;
+  animation: shine 6s infinite ease-in-out;
+}

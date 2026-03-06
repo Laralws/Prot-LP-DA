@@ -1,0 +1,98 @@
+
+
+
+#root {
+
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.font-lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Você pode variar de 400 a 700 */
+  font-style: normal;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse-cintilante {
+  0% { box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.7); transform: scale(1); }
+  50% { box-shadow: 0 0 20px 10px rgba(30, 58, 138, 0); transform: scale(1.02); }
+  100% { box-shadow: 0 0 0 0 rgba(30, 58, 138, 0); transform: scale(1); }
+}
+
+.animate-whatsapp {
+  animation: pulse-cintilante 2s infinite;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.font-titulo {
+  font-family: 'Roboto Flex', serif !important;
+  font-weight: 400;
+}
+/* Remove definitivamente as setas padrão que esticam no modo coverflow */
+.mySwiper .swiper-button-next, 
+.mySwiper .swiper-button-prev {
+  display: none !important;
+}
+
+.mySwiper .swiper-button-next::after, 
+.mySwiper .swiper-button-prev::after {
+  content: "" !important;
+  display: none !important;
+}
+
+/* Garante que o slide central não corte as sombras laterais */
+.swiper-slide {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}/* Remove definitivamente as setas padrão que esticam no modo coverflow */
+.mySwiper .swiper-button-next, 
+.mySwiper .swiper-button-prev {
+  display: none !important;
+}
+
+.mySwiper .swiper-button-next::after, 
+.mySwiper .swiper-button-prev::after {
+  content: "" !important;
+  display: none !important;
+}
+
+/* Garante que o slide central não corte as sombras laterais */
+.swiper-slide {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
